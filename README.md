@@ -1,3 +1,3 @@
 # moonshot-frontend
 
-This is the Moonshot static webpage
+This is the Moonshot static webpage.
