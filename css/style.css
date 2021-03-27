@@ -278,6 +278,10 @@ a {
     line-height:2.75vh;
 }
 
+.centered {
+    text-align:center;
+}
+
 .about .about-img {
     width: 45%;
     height: 40%;
@@ -336,6 +340,41 @@ a {
     z-index: -2
 }
 
+#presale-box {
+    visibility: hidden;
+}
+
+.launch {
+    font-size:1.75vw;
+    font-weight: bold;
+    color: var(--dark-red);
+    text-align:center;
+    vertical-align: middle;
+    height:4vw;
+    margin-top:2vw;
+}
+
+.dark {
+    color: var(--dark);
+    height: 100%;
+    align-content: center;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+}
+
+.presale {
+    width:100%;
+    line-height: 2.5vh;
+    padding-top: 4vh;
+}
+
+.presale .row {
+    font-size:1.15vw;
+    line-height: 1.75vh;
+    margin-top:2vh;
+    margin-bottom:2vh;
+}
 
 .about h3 {
     font-size: 1.85vw;
