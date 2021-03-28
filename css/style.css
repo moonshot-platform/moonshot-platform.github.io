@@ -785,6 +785,88 @@ footer a:hover {
     }
 }
 
+@media(max-width: 375px) {
+    footer p {
+        font-size:0.5vw;
+    }
+    .icon {
+        width:24px;
+        height:16px;
+        padding-right:8px;
+    }
+    .dark {
+        color: var(--dark);
+        height: 100%;
+        align-content: center;
+        justify-content: center;
+        display: flex;
+        flex-direction: column;
+        font-size:2vh;
+    }
+    .about h3 {
+        font-size: 2.5vmin;
+        line-height: 4.0vmin;
+    }
+    .about .about-text h2 {
+        font-size: 2.0vmin;
+        line-height: 3.75vmin;
+    }
+    
+    .about .about-text p {
+        font-size: 1.75vmin;
+        line-height: 3.5vmin;
+    }
+    
+    .about .about-bottom .bottom-text div p {
+        font-size: 1.75vmin;
+        line-height: 3.5vmin;
+    }
+
+    .about .about-text {
+        width:65%;
+    }
+    
+    .presale {
+        width: 100%;
+        line-height: 3.5vmin;
+        padding-top: 4vh;
+    }
+
+    .presale .row {
+        
+        line-height: 3.5vmin;
+        margin-top:2vh;
+        margin-bottom:2vh;
+    }
+    
+    .roadmap .container .rb-container .rb .btn {
+        font-size: 1.5vmin;
+        line-height: 3.0vmin;
+    }
+    
+    .roadmap .container ul.rb li .timestamp {
+        font-size: 1.5vmin;
+        line-height: 3.0vmin;
+    }
+
+    .roadmap .container .item-title {
+        line-height: 3.0vmin;
+    }
+
+    .buttons a {
+        width: 35vw;
+    }
+
+    body {
+        font-size:1.75vmin;
+        line-height: 3.5vmin;
+    }
+
+    footer p {
+        font-size:0.85vmin;
+    }
+
+}
 
 @media(min-width:1400px) {
 
