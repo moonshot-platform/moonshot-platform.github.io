@@ -830,10 +830,10 @@ footer a:hover {
         width: 100%;
         line-height: 3.5vmin;
         padding-top: 4vh;
+        font-size: 1.45vmin;
     }
 
     .presale .row {
-        
         line-height: 3.5vmin;
         margin-top:2vh;
         margin-bottom:2vh;
@@ -851,6 +851,13 @@ footer a:hover {
 
     .roadmap .container .item-title {
         line-height: 3.0vmin;
+    }
+
+    .roadmap .roadmap-img {
+        width: 35%;
+        height: 50%;
+        margin-left: -10vw;
+        margin-top: 10vh;
     }
 
     .buttons a {
