@@ -133,29 +133,65 @@
         <div class="content">
             <div class="about-text">
                 <p>
-                Original supply: 1 quadrillion
-                </p>
-                <p>
-                Circulating supply: 0
-                </p>
-                <p>
-                Total burned: 0
-                </p>
-                <p>
                 Staking: For every transaction, 4% is distributed to holders
                 </p>
                 <p>
                 Liquidity: For every transaction, 6% is auto-locked to liquidity pool
-                </p>
-                <p>
-
                 </p>
             </div>
             <div class="content-img-op-engine">
             
             </div>
         </div>
+        <div class="content">
+          <div class="about-bottom">
+
+            <div class="bottom-text">
+
+              <div class="coinStats">
+                <div>
+                    <p>Total supply:</p>
+                    <p class="dr">1,000,000,000,000,000 (1 quadrillion)</p>
+                </div>
+                <div>
+                    <p>Circulating supply:</p>
+                    <p class="dr" id="circSupply"></p>
+                </div>
+                <div>
+                    <p>Burned forever:</p>
+                    <p class="dr" id="burnedSupply"></p>
+                </div>
+                <div>
+                    <p>Price for one MOONSHOT:</p>
+                    <p class="dr" id="priceSpot1"></p>
+                </div>
+                <div>
+                    <p>Price for one million MOONSHOT:</p>
+                    <p class="dr" id="priceSpot"></p>
+                </div>
+                <div>
+                    <p>MOONSHOT for 1 BNB:</p>
+                    <p class="dr" id="priceBNB"></p>
+                </div>
+                <div>
+                    <p>Market cap:</p>
+                    <p class="dr" id="marketCap"></p>
+                </div>
+            </div>
+
+          </div>
+
+        </div>
+      </div>
     </div>
+
+    <div class="about">   
+      <div class="content">
+    <div class="about-bottom">
+    
+    </div>
+    </div>
+  </div>
 
 
     
@@ -467,6 +503,7 @@
       }
     }
   </script>
-
+  <script src="js/web3.js"></script>
+  <script src="js/price-widget.js"></script>
 </body>
 </html>

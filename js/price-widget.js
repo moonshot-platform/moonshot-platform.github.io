@@ -28,10 +28,10 @@ const init = async () => {
     const uniTotalOutputSell = await panCakeRouter.methods.getAmountsOut(amount, [WBNB, MOON]).call();
 
     const totalSupply = await ssContract.methods.totalSupply().call();
-    const deadBalance = await ssContract.methods.balanceOf("0x0000000000000000000000000000000000000000").call();
-
+    const deadBalance = await ssContract.methods.balanceOf("0x000000000000000000000000000000000000dead").call();
+    const moreDeadBalance = await ssContract.methods.balanceOf("0x0000000000000000000000000000000000000000").call();
     const totalSupplyBN = web3.utils.toBN(totalSupply);
-    const deadSupplyBN = web3.utils.toBN(deadBalance);
+    const deadSupplyBN = web3.utils.toBN(deadBalance).add(web3.utils.toBN(moreDeadBalance));
 
     const circSupply = totalSupplyBN.sub(deadSupplyBN);
 

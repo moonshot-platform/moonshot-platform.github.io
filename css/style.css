@@ -340,6 +340,7 @@ a {
     z-index: -2
 }
 
+
 #presale-box {
     visibility: visible;
 }
@@ -435,6 +436,10 @@ a {
     color: rgba(255, 255, 255, .6);
 }
 
+
+.about .about-bottom .bottom-text .coinStats p.dr {
+    color:var(--dark-red);
+}
 
 
 .roadmap {
@@ -678,7 +683,6 @@ a {
 .roadmap .container .done::before {
     background: #50d890;
 }
-
 
 footer {
     height: 5vh;
