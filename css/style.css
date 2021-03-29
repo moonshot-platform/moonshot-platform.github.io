@@ -341,7 +341,7 @@ a {
 }
 
 #presale-box {
-    visibility: hidden;
+    visibility: visible;
 }
 
 .launch {
