@@ -44,7 +44,7 @@ const init = async () => {
 
     circSupplyEl.innerHTML = formatAmount(circ);
     burnedSupplyEl.innerHTML = formatAmount(dead);
-    priceBNBEl.innerHTML = "1BNB = " + formatAmount(oneBNB) + "MOONSHOT";
+    priceBNBEl.innerHTML = "1BNB = " + formatAmount(oneBNB) + " MOONSHOT";
     marketCapEl.innerHTML = "$" + formatAmount(Math.round(circ / oneBNB * 250));
     priceSpotEl.innerHTML = "$" + priceFor1BNB;
     priceSpot1El.innerHTML = "$" + priceFor1ss;
