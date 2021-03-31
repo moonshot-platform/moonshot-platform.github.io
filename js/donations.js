@@ -93,6 +93,7 @@ async function makeDonation() {
   
   let beneficiary = '0x9d8a5d6B405c2Eb7cee724F4B2F67a902F0f0864';
   var amountToDonate = document.querySelector("#amount").value;
+  var textElem = document.querySelector("#thankyou");
   
   web3.eth.sendTransaction(
     {
@@ -102,14 +103,22 @@ async function makeDonation() {
     },
     (error, result) => {
       if (error) {
-
-        console.log( error.message );
-
+   
+        textElem.innerHTML = error.message;
+        let a = document.getElementById("fail");
+        
+        a.currentTime = 0;
+        a.loop = false;
+        a.play();
+       
         return console.error(error);
       }
-      // Handle the result (TX ID)
-      // https://bscscan.com/tx/
-      console.log(result);
+        let a = document.getElementById("rocket");
+        
+        a.currentTime = 0;
+        a.loop = false;
+        a.play();
+        textElem.innerHTML = "Liftoff! We have a liftoff!";
     }
   );
 
