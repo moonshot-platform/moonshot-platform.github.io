@@ -66,11 +66,6 @@ async function fetchAccountData() {
   selectedAccount = accounts[0];
   document.querySelector("#selected-account").textContent = selectedAccount;
 
-  const accountContainer = document.querySelector("#accounts");
-  accountContainer.innerHTML = '';
-
-
-
   // Display fully loaded UI for wallet data
   document.querySelector("#prepare").style.display = "none";
   document.querySelector("#connected").style.display = "block";
