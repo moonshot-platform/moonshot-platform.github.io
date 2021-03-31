@@ -723,6 +723,23 @@ footer a:hover {
     color: var(--fonts-hover)
 }
 
+#prepare {
+    display:block;
+}
+
+#connected {
+    display:none;
+}
+
+#network {
+    display:none;
+}
+
+input[type="number"] {
+    font-size: 2.0vmin;
+}
+
+
 @-webkit-keyframes earth {
     0% {
         -webkit-transform: rotate(0deg);
@@ -866,6 +883,14 @@ footer a:hover {
 
     .buttons a {
         width: 35vw;
+    }
+
+    .smaller {
+        font-size: smaller;
+    }
+
+    .left {
+        text-align:left;
     }
 
     body {

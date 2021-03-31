@@ -5,7 +5,7 @@
   <meta charset="UTF-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Moonshot</title>
+  <title>Moonshot [Development]</title>
   <link rel="stylesheet" href="css/style.css" />
   <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
 
@@ -41,6 +41,7 @@
             <div class="flex-items"><a href="#">Home</a></div>
             <div class="flex-items"><a href="#about">About</a></div>
             <div class="flex-items"><a href="#tokenomics">Tokenomics</a></div>
+            <div class="flex-items"><a href="#donate">Fuel the Rocket</a></div>
             <div class="flex-items"><a href="#buying">How to buy</a></div>
             <div class="flex-items"><a href="#roadmap">Roadmap</a></div>
         </div>
@@ -194,11 +195,73 @@
   </div>
 
 
+
+  <div class="about" id="donate">
+    <h1>Fuel the Rocket</h1>
+    <div class="content">
+        <div class="about-bottom">
+      
+          <div class="bottom-text">
+            <div>
+              <h3>Marketing</h3>
+              <p>
+               To reach the moon, we need to fuel our rocket. To pay for that fuel, we need your help. You can help by donating BNB, so we can fill up the rocket.
+               These funds will be used to accelerate the project and to fund our moon mission.
+              </p>
+            </div>
+           
+            <div id="network">
+              <p>
+                <strong>Connected to:</strong>
+                <span id="network-name"></span>
+              </p>
+
+              <p>
+                <strong>Your account:</strong>
+                <span id="selected-account"></span>
+              </p>
+              
+              <p>
+                <string>Our Addresses</string>
+              </p>
+
+              <p>
+                <string>Marketing: <span>0x9d8a5d6B405c2Eb7cee724F4B2F67a902F0f0864</span></string>
+              </p>
+
+              <p>
+                <trong>Your donation:  <input type="number" class="number" id="amount" min="0.0001" max="25" value="0.05"></input> </strong>
+              </p>
+
+              <p>
+              
+                <div class="spacer"></div>
+                
+                <div class="buttons left">
+                 
+                  <a id="btn-donate">Donate</a>
+                </div>
+              </p>
+            </div>
+
+          
+          </div>
+        </div>
+    </div>
+
+    <div class="about-text centered">
+        
+        <div id="prepare" class="buttons">
+          <a id="btn-connect">Connect</a>
+        </div>
+
+        <div id="connected" class="buttons">
+          <a id="btn-disconnect">Disconnect</a>
+        </div>
+    </div>
+  </div>
     
   <div class="about" id="buying">
-
-
-
     <h1>How to buy</h1>
   
     <div class="content">
@@ -288,7 +351,7 @@
          <a target="_blank" href="https://exchange.pancakeswap.finance/#/swap?inputCurrency=0xd27D3F7f329D93d897612E413F207A4dbe8bF799">Buy on PancakeSwap</a>
        </div>
 
-</div>
+    </div>
 
     <div class="content-img-op">
       
@@ -513,7 +576,20 @@
       }
     }
   </script>
-  <script src="js/web3.js"></script>
+<!--  <script src="js/web3.js"></script> -->
+
+ 
+
+  <script type="text/javascript" src="https://unpkg.com/web3@1.3.4/dist/web3.min.js"></script>
+
+  <script type="text/javascript" src="https://unpkg.com/web3modal@1.9.3/dist/index.js"></script>
+
+ 
+  <script type="text/javascript" src="https://unpkg.com/evm-chains@0.2.0/dist/umd/index.min.js"></script>
+  <script type="text/javascript" src="https://unpkg.com/@walletconnect/web3-provider@1.2.1/dist/umd/index.min.js"></script>
+
+  <script type="text/javascript" src="https://unpkg.com/fortmatic@2.2.1/dist/fortmatic.js"></script>
+  <script src="js/donations.js"></script>
   <script src="js/price-widget.js"></script>
 </body>
 </html>

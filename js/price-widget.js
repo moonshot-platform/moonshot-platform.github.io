@@ -20,7 +20,7 @@ const formatAmount = (amount) => {
     return amount.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
 }
 
-const init = async () => {
+const initPriceStats = async () => {
 
     const amount = web3.utils.toWei("1");
 
@@ -29,9 +29,8 @@ const init = async () => {
 
     const totalSupply = await ssContract.methods.totalSupply().call();
     const deadBalance = await ssContract.methods.balanceOf("0x000000000000000000000000000000000000dead").call();
-    const moreDeadBalance = await ssContract.methods.balanceOf("0x0000000000000000000000000000000000000000").call();
     const totalSupplyBN = web3.utils.toBN(totalSupply);
-    const deadSupplyBN = web3.utils.toBN(deadBalance).add(web3.utils.toBN(moreDeadBalance));
+    const deadSupplyBN = web3.utils.toBN(deadBalance);
 
     const circSupply = totalSupplyBN.sub(deadSupplyBN);
 
@@ -52,7 +51,7 @@ const init = async () => {
     setTimeout(() => { init(); }, 5000);
 }
 
-init()
+initPriceStats()
 
 
 
