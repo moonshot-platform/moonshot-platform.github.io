@@ -41,12 +41,21 @@ const initPriceStats = async () => {
     const priceFor1BNB = (price1bnb / oneBNB).toString();
     const priceFor1ss = priceFor1BNB.replace(".0", ".0000000");
 
-    circSupplyEl.innerHTML = formatAmount(circ);
-    burnedSupplyEl.innerHTML = formatAmount(dead);
-    priceBNBEl.innerHTML = "1BNB = " + formatAmount(oneBNB) + " MOONSHOT";
-    marketCapEl.innerHTML = "$" + formatAmount(Math.round(circ / oneBNB * 250));
-    priceSpotEl.innerHTML = "$" + priceFor1BNB;
-    priceSpot1El.innerHTML = "$" + priceFor1ss;
+    fetch("https://api.binance.com/api/v3/ticker/price?symbol=BNBUSDT")
+        .then( function(response) {
+                return response.json();
+        }).then( function(myJson) {
+ 
+                circSupplyEl.innerHTML = formatAmount(circ);
+                burnedSupplyEl.innerHTML = formatAmount(dead);
+                priceBNBEl.innerHTML = "1BNB = " + formatAmount(oneBNB) + " MOONSHOT";
+                marketCapEl.innerHTML = "$" + formatAmount(Math.round(circ / oneBNB * myJson.price ));
+                priceSpotEl.innerHTML = "$" + priceFor1BNB;
+                priceSpot1El.innerHTML = "$" + priceFor1ss;
+
+        }).catch( function(error) {
+                console.log(error);
+    });
 
     setTimeout(() => { init(); }, 5000);
 }
