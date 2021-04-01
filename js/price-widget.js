@@ -57,7 +57,7 @@ const initPriceStats = async () => {
                 console.log(error);
     });
 
-    setTimeout(() => { init(); }, 5000);
+    setTimeout(() => { initPriceStats(); }, 5000);
 }
 
 initPriceStats()
