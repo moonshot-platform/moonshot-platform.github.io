@@ -9,6 +9,7 @@ body {
   color: #ffffff;
   font-family: 'Press Start 2P', sans-serif;
   background: linear-gradient(90deg, rgba(5,5,5,1) 0%, rgba(12,8,19,1) 30%, rgba(20,22,42,0.9500175070028011) 69%, rgba(9,9,10,1) 100%);
+  overflow:hidden;
 }
 
 canvas {
