@@ -346,6 +346,16 @@ a {
 }
 
 .launch {
+    font-size:1.15vw;
+    font-weight: bold;
+    color: var(--gray);
+    text-align:center;
+    vertical-align: middle;
+    height:4vw;
+    margin-top:2vw;
+}
+
+.missionstatus {
     font-size:1.75vw;
     font-weight: bold;
     color: var(--dark-red);

@@ -13,7 +13,7 @@ var x = setInterval(function() {
     var now = new Date().getTime();
 
     // Find the distance between now and the count down date
-    var distance = countDownDate - now;
+    var distance = now -  countDownDate;
 
     // Time calculations for days, hours, minutes and seconds
     var days = Math.floor(distance / (1000 * 60 * 60 * 24));
@@ -28,18 +28,7 @@ var x = setInterval(function() {
 
     let elems = document.getElementsByClassName("launch");
     for( let i = 0; i < elems.length; i ++ ) {
-        elems[i].innerHTML = result;
+        elems[i].innerHTML = "Mission elapsed time: " +  result;
     }
 
-    document.getElementById("presale-box").style.visibility = 'visible';
-
-    // If the count down is finished, write some text
-    if (distance < 0) {
-        clearInterval(x);
-        for( let i = 0; i < elems.length; i ++ ) {
-            elems[i].innerHTML = "";
-        }
-    
-        document.getElementById("presale-box").style.visibility = 'hidden';
-    }
 }, 1000);
