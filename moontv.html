@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Moonshot</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+  <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+  <meta http-equiv="Pragma" content="no-cache" />
+  <meta http-equiv="Expires" content="0" />
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="manifest" href="/site.webmanifest">
+  <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+  <meta name="msapplication-TileColor" content="#da532c">
+  <meta name="theme-color" content="#ffffff">
+
+  <link href="https://fonts.googleapis.com/css?family=Press+Start+2P" rel="stylesheet">
+  <style>
+    html,
+    body,
+    pre,
+    code,
+    kbd,
+    samp {
+      font-family: "Press Start 2P";
+    }
+  </style>
+</head>
+
+<body>
+
+    <div class="nav" id="navbar">
+        <div class="flex-container-top">
+            <div class="flex-items"><a href="moonshot.html">Home</a></div>
+            <div class="flex-items"><a href="#youtube">Youtube</a></div>
+            <div class="flex-items"><a href="#tiktok">TikTok</a></div>
+        </div>
+    </div>
+
+    <div class="moonshot">
+      
+        <div class="introduction">
+          Moon TV. Zap to your channel.
+        </div>
+
+        <div id="tiktok">
+          <blockquote class="tiktok-embed" cite="https://www.tiktok.com/@blaneoh/video/6946635852697128198" 
+              data-video-id="6946635852697128198" style="max-width: 605px;min-width: 325px;" > 
+          <section> <a target="_blank" title="@blaneoh" href="https://www.tiktok.com/@blaneoh">@blaneoh</a>
+            <p>PROJECT-MOONSHOT.ME get in early and hold. Make a video to soread awareness for how amazing this coin is. 
+              <a title="fyp" target="_blank" href="https://www.tiktok.com/tag/fyp">##fyp</a> <a title="crypto" target="_blank" href="https://www.tiktok.com/tag/crypto">##crypto</a></p>
+              <a target="_blank" title="♬ Pavor  [Hip Hop] - Instrumental - Cuarta Pared Studio" href="https://www.tiktok.com/music/Pavor-Hip-Hop-Instrumental-6805759042980415490">
+                ♬ Pavor  [Hip Hop] - Instrumental - Cuarta Pared Studio</a> </section> </blockquote> <script async src="https://www.tiktok.com/embed.js"></script>
+        </div>
+    
+        <div class="buttons">
+            <a target="_blank" href="https://t.me/RS25Moonshot">Join on Telegram</a>
+            <a target="_blank" href="https://twitter.com/RS25Moonshot">Join on Twitter</a>
+        </div>
+
+    </div>
+
+    <div class="moonshot">
+
+      <div id="youtube">
+        <iframe width="420" height="315"
+          src="https://www.youtube.com/embed/1rgyL0NE3C4?controls=0">
+        </iframe>
+      </div>
+
+    </div>
+
+    <div class="spacer"></div>
+    
+    <footer>
+        <p>Moonshot is a social experiment issued on the Binance
+          smart chain that is fully community-driven!</p>
+      </footer>
+
+    <div class="spacer"></div>
+   
+    <div class="nav">
+        <div class="flex-container-bottom">
+            <div class="flex-items"><span><a class="link" target="_blank" href="https://solidity.finance/audits/MOONSHOT/"><img class="icon" src="img/solidity-finance.png"/></a></span></div>
+            <div class="flex-items"><span><a class="link" target="_blank" href="https://github.com/moonshot-platform"><img class="icon" src="img/github.png"/></a></span></div>
+            <div class="flex-items"><span><a class="link" target="_blank" href="https://t.me/MoonShotChat"><img class="icon" src="img/telegram.svg"/></a></span></div>
+            <div class="flex-items"><span><a class="link" target="_blank" href="https://twitter.com/RS25Moonshot"><img class="icon" src="img/twitter.png"/></a></span></div>
+       <!--     <div class="flex-items"><span><a class="link" target="_blank" href="https://discord.gg/s466cnSpjx"><img class="icon" src="img/discord.svg"/></a></span></div> -->
+            <div class="flex-items"><span><a class="link" target="_blank" href="https://bscscan.com/address/0xd27d3f7f329d93d897612e413f207a4dbe8bf799#code"><img class="icon" src="img/bsc.ico"/></a></span></div>
+            <div class="flex-items"><span><a class="link" target="_blank" href="https://exchange.pancakeswap.finance/#/swap?inputCurrency=0xd27D3F7f329D93d897612E413F207A4dbe8bF799"><img class="icon" src="img/pancakeswap.ico"/></a></span></div>
+        </div>
+    </div> 
+
+  <script>
+    var isPlaying = false;
+    
+    window.onscroll = function () {
+      scrollFunction();
+    };
+    function scrollFunction() {
+      if (
+        document.body.scrollTop > 80 ||
+        document.documentElement.scrollTop > 80
+      ) {
+        document.getElementById("navbar").style.background = "#00000090";
+      } else {
+        document.getElementById("navbar").style.background = "#00000000";
+      }
+    }
+    
+    function play() {
+      let a = document.getElementById("music");
+      if(!isPlaying) {
+        a.currentTime = 0;
+        a.loop = true;
+        isPlaying = a.play();
+        document.getElementById("takethemoonshot").innerText = "TAKE THE MOONSHOT 𝅘𝅥𝅯𝆕";
+        window.open( "game.html", '_blank').focus();
+      }
+      else {
+        isPlaying = a.pause();
+        document.getElementById("takethemoonshot").innerText = "TAKE THE MOONSHOT";
+      }
+    }
+  </script>
+<!--  <script src="js/web3.js"></script> -->
+
+ 
+
+  <script type="text/javascript" src="https://unpkg.com/web3@1.3.4/dist/web3.min.js"></script>
+
+  <script type="text/javascript" src="https://unpkg.com/web3modal@1.9.3/dist/index.js"></script>
+
+ 
+  <script type="text/javascript" src="https://unpkg.com/evm-chains@0.2.0/dist/umd/index.min.js"></script>
+  <script type="text/javascript" src="https://unpkg.com/@walletconnect/web3-provider@1.2.1/dist/umd/index.min.js"></script>
+
+  <script type="text/javascript" src="https://unpkg.com/fortmatic@2.2.1/dist/fortmatic.js"></script>
+  <script src="js/donations.js"></script>
+  <script src="js/price-widget.js"></script>
+  <script src="js/countdown.js"></script>
+</body>
+</html>
