@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Moonshot</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+  <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+  <meta http-equiv="Pragma" content="no-cache" />
+  <meta http-equiv="Expires" content="0" />
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="manifest" href="/site.webmanifest">
+  <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+  <meta name="msapplication-TileColor" content="#da532c">
+  <meta name="theme-color" content="#ffffff">
+
+  <link href="https://fonts.googleapis.com/css?family=Press+Start+2P" rel="stylesheet">
+  <style>
+    html,
+    body,
+    pre,
+    code,
+    kbd,
+    samp {
+      font-family: "Press Start 2P";
+    }
+  </style>
+</head>
+
+<body>
+
+    <div class="nav" id="navbar">
+        <div class="flex-container-top">
+            <div class="flex-items"><a href="moonshot.html">Home</a></div>
+            <div class="flex-items"><a href="#youtube">Youtube</a></div>
+            <div class="flex-items"><a href="#tiktok">TikTok</a></div>
+        </div>
+    </div>
+
+    <div class="moonshot">
+      
+        <div class="introduction">
+          Moon Ticket. Get your ticket here.
+          <div class="spacer"></div>
+          <p>
+            <strong>Your Name:  <input type="text" class="number" id="yourname" min="0.0001" max="45" value="Moonshotter"></input> </strong>
+          </p>
+
+        </div>
+
+        <div>
+          <canvas id="canvas" width="1600" height="658" class="moonticket">
+
+          </canvas>
+        </div>
+
+        <div class="spacer">
+
+        </div>
+
+        <div class="buttons">
+          <a target="_blank" id="btn-download" onclick="downloadTicket(this);" href="#">Download Ticket</a>
+        </div>
+
+    </div>
+
+   
+  <script>
+
+    var fontFamily = 'pt "Futura"';
+
+    function calcPointSize( size, text, ctx ) {
+      let pointsize = 40;
+      let itFits = false;
+    
+      while( !itFits ) {
+        ctx.font = size + fontFamily;
+        let box_width = (1471 - 1120);
+        let metrics = ctx.measureText( text );
+        if( metrics.width >= box_width ) {
+          size = size - 1;
+          continue;
+        }
+        else if( size <= 1 ) {
+          return 0;
+        }
+        else {
+          return size;
+        }
+      }
+      
+    }
+
+
+    function drawImage(yourName) {
+     var canvas = document.getElementById("canvas");
+     var context = canvas.getContext("2d");
+     var imageObj = new Image();
+     imageObj.onload = function(){
+         context.drawImage(imageObj, 0, 0);
+         let pointSize = calcPointSize( 40, yourName, context );
+         console.log("Calculated point size ", pointSize);
+
+         context.font = pointSize + fontFamily;
+         context.fillStyle = "#4b4b4b";
+
+         let x1 = 1113;
+         let y1 = 440;
+         let x2 = 1471;
+         let box_width = (1471 - 1113);
+         let text=yourName;
+         let metrics = context.measureText(text);
+         let name_width = metrics.width;
+
+         let left = 1113 + ( (box_width - name_width) / 2);
+         
+         context.fillText(yourName, left, 440);
+     };
+     imageObj.src = "img/moonticket.png"; 
+    }
+ 
+    function textChanged(el) {
+      let name =el.target.value.toUpperCase();
+      drawImage(name);
+    }
+
+
+    function downloadTicket(button) {
+     
+      var canvas = document.getElementById("canvas");
+      var dataURL = canvas.toDataURL('image/jpg');
+      button.href = dataURL;
+    }
+  
+    var inputText = document.getElementById( 'yourname');
+    inputText.addEventListener('input', textChanged);
+    inputText.addEventListener('propertychange', textChanged);
+  
+
+    drawImage("");
+
+  </script>
+<!--  <script src="js/web3.js"></script> -->
+
+ 
+
+
+</body>
+</html>
