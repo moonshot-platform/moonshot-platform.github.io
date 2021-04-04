@@ -1,4 +1,14 @@
 @import "https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap";
+
+
+@font-face {
+    font-family: Futura;
+    src: url( "../font/futura.svg"), url("../font/futura.ttf");
+}
+
+
+
+
 :root {
     --gray1: #f8f9fa;
     --gray2: #e9ecef;
@@ -35,6 +45,7 @@ html {
     -webkit-text-size-adjust: 100%;
     -moz-text-size-adjust: 100%;
     -ms-text-size-adjust: 100%;
+    
 }
 
 * {
@@ -43,6 +54,9 @@ html {
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
     text-decoration: none;
+    -webkit-font-smoothing: subpixel-antialiased;;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: geometricPrecision;
  }
 
 body {
@@ -67,6 +81,10 @@ a:active {
 }
 a {
     color: var(--nav-color);
+}
+
+.moonticket {
+    width:90vw;
 }
 
 .icon {
@@ -747,6 +765,10 @@ footer a:hover {
 
 input[type="number"] {
     font-size: 2.0vmin;
+}
+
+input[type="text"] {
+    font-size: 3vmin;
 }
 
 
