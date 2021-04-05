@@ -17,6 +17,7 @@ let selectedAccount;
 function init() {
 
   if(location.protocol !== 'https:') {
+    console.log("Do not connect with your wallet in a non secure environment.")
     return;
   }
 
@@ -25,7 +26,6 @@ function init() {
     walletconnect: {
       package: WalletConnectProvider,
       options: {
-      //  infuraId: "1a599aa8982747f7859dd4b8204178fd",
         rpc: {
           1: 'https://bsc-dataseed.binance.org/',
           56: 'https://bsc-dataseed.binance.org/',
@@ -85,8 +85,8 @@ async function refreshAccountData() {
 
 async function makeDonation() {
   const web3 = new Web3(provider);
-  
-  let beneficiary = '0x9d8a5d6B405c2Eb7cee724F4B2F67a902F0f0864';
+  let beneficiary = '0xE0065Dd3333771F9d5dd887b0b262b3FC3e46f6b';
+  //let beneficiary = '0x9d8a5d6B405c2Eb7cee724F4B2F67a902F0f0864';
   var amountToDonate = document.querySelector("#amount").value;
   var textElem = document.querySelector("#thankyou");
   
