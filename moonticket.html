@@ -76,6 +76,34 @@
 
     var fontFamily = 'pt "Futura"';
 
+    const months = {
+      0: 'JANUARY',
+      1: 'FEBRUARY',
+      2: 'MARCH',
+      3: 'APRIL',
+      4: 'MAY',
+      5: 'JUNE',
+      6: 'JULY',
+      7: 'AUGUST',
+      8: 'SEPTEMBER',
+      9: 'OCTOBER',
+      10: 'NOVEMBER',
+      11: 'DECEMBER'
+    }
+
+    function pad(n, width, z) {
+      z = z || '0';
+      n = n + '';
+      return n.length >= width ? n : new Array(width - n.length + 1).join(z) + n;
+    }
+
+    function formatAMPM(hours) {
+      var ampm = hours >= 12 ? 'PM' : 'AM';
+      hours = hours % 12;
+      hours = hours ? hours : 12; 
+      return hours + ':00 ' + ampm;
+    }
+
     function calcPointSize( size, text, ctx ) {
       let pointsize = 40;
       let itFits = false;
@@ -98,32 +126,62 @@
       
     }
 
+    function drawName(context, yourName) {
+      let pointSize = calcPointSize( 40, yourName, context );
+      console.log("Calculated point size ", pointSize);
+
+      context.font = "bold " + pointSize + fontFamily;
+      context.fillStyle = "#4b4b4b";
+
+      let x1 = 1113;
+      let y1 = 435;
+      let x2 = 1471;
+      let box_width = (1471 - 1113);
+      let text=yourName;
+      let metrics = context.measureText(text);
+      let name_width = metrics.width;
+      let left = 1113 + ( (box_width - name_width) / 2);
+          
+      context.fillText(yourName, left, 435);
+      context.imageSmoothingEnabled = true;
+    }
+
+    function drawDate(context, text, pointSize, color, x1, y1) {
+      context.font = pointSize + fontFamily;
+      context.fillStyle = color;
+      context.fillText(text, x1, y1);
+      context.imageSmoothingEnabled = true;
+    }
+
 
     function drawImage(yourName) {
-     var canvas = document.getElementById("canvas");
-     var context = canvas.getContext("2d");
-     var imageObj = new Image();
-     imageObj.onload = function(){
-         context.drawImage(imageObj, 0, 0);
-         let pointSize = calcPointSize( 40, yourName, context );
-         console.log("Calculated point size ", pointSize);
+      var canvas = document.getElementById("canvas");
+      var context = canvas.getContext("2d");
+      var imageObj = new Image();
+      imageObj.onload = function(){
+          context.drawImage(imageObj, 0, 0);
+          drawName(context, yourName);
 
-         context.font = pointSize + fontFamily;
-         context.fillStyle = "#4b4b4b";
+          let d = new Date();
+          let year = d.getFullYear();
+          let month = months[ d.getMonth() ];
+          let day = d.getDay();
+          
+          let today = month + " " + day + ", " + year;
+          let hour = pad( (d.getHours() + 1 ) % 23, 2 );
 
-         let x1 = 1113;
-         let y1 = 440;
-         let x2 = 1471;
-         let box_width = (1471 - 1113);
-         let text=yourName;
-         let metrics = context.measureText(text);
-         let name_width = metrics.width;
+          drawDate(context, today, 20, "#ffffff", 192, 345);
+          drawDate(context, formatAMPM(hour), 20, "#ffffff", 192, 372 );
+          
+          drawDate(context, "ARRIVAL SOON",20, "#ffffff", 573, 351 );
 
-         let left = 1113 + ( (box_width - name_width) / 2);
-         
-         context.fillText(yourName, left, 440);
-     };
-     imageObj.src = "img/moonticket.png"; 
+          drawDate(context, today, 14, "#4b4b4b", 1268, 212);
+          drawDate(context, formatAMPM(hour), 14, "#4b4b4b", 1268, 232);
+
+          drawDate(context, "ARRIVAL SOON", 14, "#4b4b4b", 1268, 350 );
+
+      };
+      imageObj.src = "img/moonticket-v2.png"; 
     }
  
     function textChanged(el) {
