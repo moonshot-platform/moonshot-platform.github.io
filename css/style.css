@@ -748,6 +748,7 @@ footer {
 footer p {
     color: var(--fonts);
     font-size:0.9vw;
+    line-height:1.0vw;
 }
 
 footer a {
