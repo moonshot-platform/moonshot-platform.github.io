@@ -88,6 +88,12 @@ a {
     color: var(--nav-color);
 }
 
+.moonpaper {
+    position: absolute;
+    top: 25vmin;
+    left: 10vmin;
+}
+
 .moonticket {
     width:90vw;
 }
