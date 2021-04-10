@@ -89,9 +89,8 @@ a {
 }
 
 .moonpaper {
-    position: absolute;
-    top: 25vmin;
-    left: 10vmin;
+    text-align:center;
+    padding-top:9vh;
 }
 
 .moonticket {
@@ -190,7 +189,7 @@ a {
 
 .moonshot {
     text-align:center;
-    padding-top:10vh;
+    padding-top:3vh;
 }
 
 .themoon {
@@ -858,6 +857,11 @@ input[type="text"] {
         height:16px;
         padding-right:8px;
     }
+    
+    .moonpaper-text {
+        font-size: 1.15vmin;
+    }
+
     .dark {
         color: var(--dark);
         height: 100%;
