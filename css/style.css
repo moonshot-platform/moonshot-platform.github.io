@@ -727,6 +727,24 @@ a {
     background: #50d890;
 }
 
+.buymoon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+
+.buytext {
+    color:#1c1129;
+    font-size: 4vmin;
+}
+
+.buytext:hover {
+    color:#212027;
+    font-size: 4vmin;
+}
+
 footer {
     height: 5vh;
   
