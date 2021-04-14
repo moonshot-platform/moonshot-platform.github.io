@@ -1,70 +1,708 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-    <head>
-        <title>Moonshot - Deflationary, frictionless yield and liquidity generation protocol.</title>
-        <meta charset="utf-8"/>
-        <meta name="description" content="Moonshot - Deflationary, frictionless yield and liquidity generation protocol."/>
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <!-- include the termynal stylesheet -->
-        <link rel="stylesheet" href="css/termynal.css">
-        <!-- some custom styles for the page -->
-        <link href="https://fonts.googleapis.com/css?family=Press+Start+2P" rel="stylesheet">
-        <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
-        <meta http-equiv="Pragma" content="no-cache" />
-        <meta http-equiv="Expires" content="0" />
 
-        <meta name="twitter:card" content="summary">
-        <meta name="twitter:description" content="Moonshot - Deflationary, frictionless yield and liquidity generation protocol">
-        <meta name="twitter:title" content="Project Moonshot">
-        <meta name="twitter:image" content="https://project-moonshot.me/img/moonshot-logo.png">
-        <meta name="twitter:site" content="@RS25Moonshot">
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="MoonBoxes, Moonshot, Moonsquad, MoonTicket, MoonShooters, Deflationary, frictionless yield and liquidity generation protocol"/>
+  <title>Moonshot - Deflationary, frictionless yield and liquidity generation protocol.</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+  <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+  <meta http-equiv="Pragma" content="no-cache" />
+  <meta http-equiv="Expires" content="0" />
 
-        <style>
-            body {
-                padding: 0; margin: 0;
-                background: #1a1e24;
-                width: 100%;
-                min-height: 100vh;
-                display: -webkit-box; display: -ms-flexbox; display: flex;
-                -webkit-box-align: center; -ms-flex-align: center; align-items: center;
-                -webkit-box-pack: center; -ms-flex-pack: center; justify-content: center;
-                -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale;
-            }
-        </style>
-    </head>
-    <body>
-        <div id="termynal" data-termynal>
-            <span data-ty="input">./moonshot.sh</span>
-            <span data-ty="progress" data-ty-progressLength="0"></span>
-            <span data-ty>Successfully initialized pumpamentals</span>
-            <span data-ty></span>
-            <span data-ty="input">./anti-rugpull.sh 0xd27d3f7f329d93d897612e413f207a4dbe8bf799</span>
-            <span data-ty="progress" data-ty-progressLength="0"></span>
-            <span data-ty>Liquidity locked.</span>
-            <span data-ty></span>
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="manifest" href="/site.webmanifest">
+  <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+  <meta name="msapplication-TileColor" content="#da532c">
+  <meta name="theme-color" content="#ffffff">
 
-            <span data-ty="input">./verify.sh whale-funds</span>
-            <span data-ty="progress" data-ty-progressLength="0"></span>
-            <span data-ty>Max allocation set to 2 BNB</span>
-            <span data-ty></span>
+  <link href="https://fonts.googleapis.com/css?family=Press+Start+2P" rel="stylesheet">
+  <style>
+    html,
+    body,
+    pre,
+    code,
+    kbd,
+    samp {
+      font-family: "Press Start 2P";
+    }
+  </style>
+</head>
 
-            <span data-ty="input">./meme-generator.sh</span>
-            <span data-ty="progress" data-ty-progressLength="0"></span>
-            <span data-ty>EPIC MEMES loaded</span>
-            <span data-ty></span>
+<audio id="music">
+  <source src="audio/sawsquarenoise-stage-3.mp3" type="audio/mp3">
+</audio>
+<audio id="rocket">
+  <source src="audio/99970__raelwissdorf__v-start.mp3" type="audio/mp3">
+</audio>
+<audio id="fail">
+  <source src="audio/558735__samsterbirdies__8-bit-fail.mp3" type="audio/mp3">
+</audio>
 
-            <span data-ty="input">./mission-control.sh</span>
-            <span data-ty="progress" data-ty-progressLength="0"></span>
-            <span data-ty>Project moonshot engaged</span>
-            <span data-ty></span>
+<body>
+
+    <div class="nav" id="navbar">
+        <div class="flex-container-top">
+            <div class="flex-items"><a href="#">Home</a></div>
+            <div class="flex-items"><a href="#about">About</a></div>
+            <div class="flex-items"><a href="#tokenomics">Tokenomics</a></div>
+            <div class="flex-items"><a href="#rocketfuel">Fuel the Rocket</a></div>
+            <div class="flex-items"><a href="moonticket.html">Ticket</a></div>
+            <div class="flex-items"><a href="#buying">How to buy</a></div>
+            <div class="flex-items"><a href="#roadmap">Roadmap</a></div>
+            <div class="flex-items"><a href="moontv.html">Moon TV</a></div>
+        </div>
+    </div>
+
+    <div class="moonpaper">
+        <a href="moonpaper.pdf"><span class="moonpaper-text">CLICK HERE FOR MOONPAPER</span></a>
+    </div>
+
+    <div class="moonshot">
+      <div class="small" style="color:#fff;">
+        <div class="launch"></div>
+       </div>
+        <div class="themoon">
+          <div class="buymoon"><a class="buytext" href="#buying">How to buy</a></div>
+        </div>
+        <div class="caption">
+            <h1>
+            <a onclick="play();" target="_blank" id="takethemoonshot">TAKE THE MOONSHOT</a>
+            </h1>
+            <div class="small" style="color:#343a40;padding-top:8px;">
+              Press to Play
+            </div>
+            <div class="introduction">
+                <p>Deflationary, frictionless yield and liquidity generation protocol.</p>
+                <p>Simply hold Moonshot in your wallet and gain rewards when others transfer.</p>
+
+            </div>
+        </div>
+    
+        <div class="buttons">
+            <a target="_blank" href="https://t.me/MoonShotChat">Join on Telegram</a>
+            <a target="_blank" href="https://twitter.com/RS25Moonshot">Join on Twitter</a>
+        </div>
+    </div>
+ 
+    <div class="about" id="about">
+        <h1>About</h1>
+        <div class="content">
+            <div class="about-text">
+                <h2>
+                    <b>
+                      Moonshot is a deflationary, self-regenerating automatic liquidity providing protocol that pays out static
+                      rewards to holders.
+                      As our burn address is in the list of holders, the total supply of moonshot is forever decreasing.
+                    </b>
+                </h2>
+                <p>
+        
+                </p>
+                <div>
+                  <h3>Reward distribution</h3>
+                  <p>
+                    4% of each transaction is distributed amongst Moonshot holders. This increases the incentive to
+                    hold the tokens in the wallets. When nobody is selling, the price could moon rocket. WallStreetBets
+                    won the fight against hedge funds. Just by buying and holding, as the key to success. Every single Moonshot
+                    holder
+                    has an incentive to spread the use of Moonshot as much as possible. As more transactions take place in the
+                    network,
+                    the net-worth of every individual increases as well.
+                  </p>
+                </div>
+            </div>
+            <div class="about-img op">
+               <img src="img/themoon-g.png" alt="" />
+            </div>
         </div>
 
-        <script src="js/termynal.js" data-termynal-container="#termynal"></script>
-        <script>
-            window.setTimeout( function() {
-                window.location.replace("moonshot.html");
-            }, 10000);
+        <div class="content">
+            <div class="about-bottom">
+          
+              <div class="bottom-text">
+                <div>
+                  <h3>Auto-locking liquidity</h3>
+                  <p>
+                    6% of each transaction is automatically locked to the liquidity pool. This
+                    contributes to lower volatility and a continuously increasing
+                    price floor.
+                  </p>
+                </div>
+                <div>
+                  <h3>100% rugpull safe</h3>
+                  <p>
+                  LP tokens from the presale are locked for 3 years by the DXSale.Network. You can view our lock <a target="_blank" href="https://dxsale.app/app/pages/dxlockview?id=183&add=0&type=lpdefi&chain=BSC">here</a> <br />
+                  Team must buy their tokens.<br />
+                  Audit by <a target="_blank" href="https://solidity.finance/audits/MOONSHOT/">Solidity.Finance</a> successfully passed. 
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+    </div>
+
+
+    <div class="about" id="tokenomics">
+
+        <h1>Tokenomics</h1>
+        <div class="content">
+            <div class="about-text">
+                <p>
+                Staking: For every transaction, 4% is distributed to holders
+                </p>
+                <p>
+                Liquidity: For every transaction, 6% is auto-locked to liquidity pool
+                </p>
+            </div>
+            <div class="content-img-op-engine">
             
-        </script>
-    </body>
+            </div>
+        </div>
+        <div class="content">
+          <div class="about-bottom">
+
+            <div class="bottom-text">
+
+              <div class="coinStats"  id="priceticker">
+                <div>
+                    <p>Total supply:</p>
+                    <p class="dr">1,000,000,000,000,000 (1 quadrillion)</p>
+                </div>
+                <div>
+                    <p>Circulating supply:</p>
+                    <p class="dr" id="circSupply"></p>
+                </div>
+                <div>
+                    <p>Burned forever:</p>
+                    <p class="dr" id="burnedSupply"></p>
+                </div>
+                <div>
+                    <p>Price for one MOONSHOT:</p>
+                    <p class="dr" id="priceSpot1"></p>
+                </div>
+                <div>
+                    <p>Price for one million MOONSHOT:</p>
+                    <p class="dr" id="priceSpot"></p>
+                </div>
+                <div>
+                    <p>MOONSHOT for 1 BNB:</p>
+                    <p class="dr" id="priceBNB"></p>
+                </div>
+                <div>
+                    <p>Market cap:</p>
+                    <p class="dr" id="marketCap"></p>
+                </div>
+            </div>
+
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <div class="about">   
+      <div class="content">
+    <div class="about-bottom">
+    
+    </div>
+    </div>
+  </div>
+
+<!--
+  <div class="about" id="rocketfuel">
+    <h1>Fuel the Rocket</h1>
+    <div class="content">
+        <div class="about-bottom">
+      
+          <div class="bottom-text">
+            <div>
+              <h3>Exchange</h3>
+              <p>
+               To be listed at <a target="_blank" href="https://www.bitmart.com/">BitMart</a> , we need to fuel the Bitmart rocket. To pay for that fuel, we need your help. You can help by donating BNB, so we can fill up the rocket with 100 BNB.
+               These funds will be used to get us listed at this Exchange. Our fund address for this is <a target="_blank" href="https://bscscan.com/address/0xE0065Dd3333771F9d5dd887b0b262b3FC3e46f6b">0xE0065Dd3333771F9d5dd887b0b262b3FC3e46f6b</a>
+              </p>
+              <p id="thankyou"></p>
+            </div>
+           
+            <div id="network">
+              <p>
+                <strong>Connected to:</strong>
+                <span id="network-name"></span>
+              </p>
+
+              <p>
+                <strong>Your account:</strong>
+                <span id="selected-account"></span>
+              </p>
+              
+              <p>
+                <string>Our Addresses</string>
+              </p>
+
+              <p>
+                <strong>Listing:<span>0xE0065Dd3333771F9d5dd887b0b262b3FC3e46f6b</span></span></strong>
+                <strong>Marketing:<span>0x9d8a5d6B405c2Eb7cee724F4B2F67a902F0f0864</span></strong>
+              </p>
+
+              <p>
+                <strong>Your donation:  <input type="number" class="number" id="amount" min="0.0001" max="25" value="0.05"></input> </strong>
+              </p>
+
+              <p>
+              
+                <div class="spacer"></div>
+                
+                <div class="buttons left">       
+                  <a id="btn-donate">Donate</a>
+                </div>
+              </p>
+            </div>
+
+          
+          </div>
+        </div>
+    </div>
+  -->
+
+
+  <div class="about" id="rocketfuel">
+    <h1>Fuel the Rocket</h1>
+    <div class="content">
+        <div class="about-bottom">
+      
+          <div class="bottom-text">
+            <div>
+              <h3>Marketing</h3>
+              <p>
+               To reach the moon, we need to fuel our rocket. To pay for that fuel, we need your help. You can help by donating BNB, so we can fill up the rocket.
+               These funds will be used to accelerate the project and to fund our moon mission. Our fund address is 0x9d8a5d6B405c2Eb7cee724F4B2F67a902F0f0864
+              </p>
+              <p id="thankyou"></p>
+            </div>
+           
+            <div id="network">
+              <p>
+                <strong>Connected to:</strong>
+                <span id="network-name"></span>
+              </p>
+
+              <p>
+                <strong>Your account:</strong>
+                <span id="selected-account"></span>
+              </p>
+              
+              <p>
+                <string>Our Addresses</string>
+              </p>
+
+              <p>
+                <string>Marketing: <span>0x9d8a5d6B405c2Eb7cee724F4B2F67a902F0f0864</span></string>
+              </p>
+
+              <p>
+                <strong>Your donation:  <input type="number" class="number" id="amount" min="0.0001" max="25" value="0.05"></input> </strong>
+              </p>
+
+              <p>
+              
+                <div class="spacer"></div>
+                
+                <div class="buttons left">
+                 
+                  <a id="btn-donate">Donate</a>
+                </div>
+              </p>
+            </div>
+
+          
+          </div>
+        </div>
+    </div>
+
+    <div class="about-text centered">
+        <div id="prepare" class="buttons">
+          <a id="btn-connect">Connect</a>
+        </div>
+        <div id="connected" class="buttons">
+          <a id="btn-disconnect">Disconnect</a>
+        </div>
+    </div>
+  </div>
+
+    
+  <div class="about" id="buying">
+    <h1>How to buy</h1>
+  
+    <div class="content">
+      
+      <div class="about-text">
+        <h2>
+          Download a browser based wallet
+        </h2>
+        <p>
+          Moonshot is an BEP-20 (ERC20 compatible) token running on the Binance Smart Chain Network.
+          You can use Metamask, TrustWallet, Binance Smart Chain Wallet and others.
+        </p>
+      </div>
+    </div>
+    <div class="content">
+      <div class="about-text">
+        <h2>
+          Buy BNB
+        </h2>
+        <p>
+          Use an exchange to buy BNB. Some exchanges are Binance, Binance US
+        </p>
+      </div>
+    </div>
+    <div class="content">
+      <div class="about-text">
+        <h2>
+          Go to Moonshot website
+        </h2>
+        <p>
+          When you visit Moonshot, click on 'Buy on PancakeSwap' button.<br />
+          This will take you to the PancakeSwap website. You will receive a pop up form asking if the address belongs to
+          Moonshot.
+          Double check before you accept!
+        </p>
+      </div>
+    </div>
+    <div class="content">
+      <div class="about-text">
+        <h2>
+          Token Address:
+        </h2>
+        <h2>
+          0xd27d3f7f329d93d897612e413f207a4dbe8bf799
+        </h2>
+       
+      
+      </div>
+    </div>
+    <div class="content">
+      <div class="about-text">
+        <h2>
+          When on PancakeSwap
+        </h2>
+        <p>
+          Click on the gear button and set slippage to 11%.<br />
+          (the slippage covers the 10% explained in <a href="#tokenomics">tokenomics</a>)
+          If that gives you an error, increase the slippage to 12% or more.<br />
+        </p>
+      </div>
+    </div>
+    <div class="content">
+      <div class="about-text">
+        <h2>
+          Swap BNB for Moonshot
+        </h2>
+        <p>
+          Confirm with your browser based wallet
+        </p>
+      </div>
+    </div>
+    <div class="content">
+      <div class="about-text">
+        <h2>
+          View your Moonshot in your browser based wallet
+        </h2>
+        <p>
+          To view your Moonshot, add custom token to your browser based wallet.
+          Use the address above.
+        </p>
+      </div>
+    </div>
+
+    <div class="about-text centered" id="presale-box">
+
+       <div class="buttons">
+         <a target="_blank" href="https://exchange.pancakeswap.finance/#/swap?inputCurrency=0xd27D3F7f329D93d897612E413F207A4dbe8bF799">Buy on PancakeSwap</a>
+      
+       </div>
+       <div class="centered">
+        <p style="text-align: center; color:#50d890;">
+          &raquo;&nbsp;SET SLIPPAGE TO 11%&nbsp;&laquo;
+        </p>
+        <p style="text-align: center;">
+          &raquo;&nbsp;<a target="_blank" href="https://youtu.be/sD8ekD21fmI">or watch a how to buy Moonshot video</a>&nbsp;&laquo;
+        </p>
+
+       </div>
+       
+    </div>
+
+    <div class="content-img-op">
+      
+      <img src="img/launcher.png" alt="" />
+      
+    </div>
+
+
+
+  </div>
+
+    <div class="roadmap" id="roadmap">
+
+        <h1>Road Map</h1>
+        <div class="spacer-small"></div>
+        <div class="content">
+          <div class="roadmap-img">
+            <img src="img/orbiter.png" alt="" />
+          </div>
+          <div class="container">
+            <div class="rightbox">
+              <div class="rb-container">
+                <ul class="rb">
+                  <div class="btn up">
+                    >
+                  </div>
+                  <div class="btn down">
+                    >
+                  </div>
+                  <div class="btn up2">
+                    >
+                  </div>
+                  <div class="btn down2">
+                    >
+                  </div>
+ 
+                  <li class="rb-item done" ng-repeat="itembx">
+                    <div class="timestamp">
+                      Q1 2021<br>
+                      Done
+                    </div>
+                    <div class="item-title">
+                      Moonshot initiated
+                    </div>
+                  </li>
+    
+                  <li class="rb-item done" ng-repeat="itembx">
+                    <div class="timestamp">
+                      Q1 2021<br />
+                      Done
+                    </div>
+                    <div class="item-title">
+                      Presale
+                    </div>
+                  </li>
+    
+                  <li class="rb-item done" ng-repeat="itembx">
+                    <div class="timestamp">
+                      Q1 2021<br />
+                      Done
+                    </div>
+                    <div class="item-title">
+                      31.3% of the total supply burned after launch. This was ~80% of the remaining supply after the presale.
+                    </div>
+                  </li>
+
+                  <li class="rb-item done" ng-repeat="itembx">
+                    <div class="timestamp">
+                      Q1 2021<br />
+                      Done
+                    </div>
+                    <div class="item-title">
+                      Delta listing
+                    </div>
+                  </li>
+
+                  <li class="rb-item done" ng-repeat="itembx">
+                    <div class="timestamp">
+                      Q1 2021<br />
+                      Done
+                    </div>
+                    <div class="item-title">
+                      Blockfolio listing
+                    </div>
+                  </li>
+                  
+                  <li class="rb-item done" ng-repeat="itembx">
+                    <div class="timestamp">
+                      Q2 2021<br />
+                      Done
+                    </div>
+                    <div class="item-title">
+                      Coinmarketcap tracking
+                    </div>
+                  </li>
+
+                  <li class="rb-item done" ng-repeat="itembx">
+                    <div class="timestamp">
+                      Q2 2021<br />
+                      Ongoing
+                    </div>
+                    <div class="item-title">
+                      Keep burning the dev wallet as we greet new holders. Burn at 500,1000,2000, etc. until there are no more tokens left.
+                    </div>
+                  </li>
+   
+                  <li class="rb-item done" ng-repeat="itembx">
+                    <div class="timestamp">
+                      Q2 2021<br />
+                      Ongoing
+                    </div>
+                    <div class="item-title">
+                      Marketing; Build social media presence
+                    </div>
+                  </li>
+
+                  <li class="rb-item done" ng-repeat="itembx">
+                    <div class="timestamp">
+                      Q2 2021<br />
+                      Ongoing
+                    </div>
+                    <div class="item-title">
+                      Listing at an Exchange
+                    </div>
+                  </li>
+    
+                  <li class="rb-item soon" ng-repeat="itembx">
+                    <div class="timestamp">
+                      Q2 2021<br />
+                      Coming soon
+                    </div>
+                    <div class="item-title">
+                      Coingecko tracking
+                    </div>
+                  </li>
+
+                  <li class="rb-item soon" ng-repeat="itembx">
+                    <div class="timestamp">
+                      Q2 2021<br />
+                      Coming soon
+                    </div>
+                    <div class="item-title">
+                      Merchandise and Moonshot branded wearables
+                    </div>
+                  </li>
+
+                  <li class="rb-item soon" ng-repeat="itembx">
+                    <div class="timestamp">Q2 2021<br/></div>
+                    <div class="item-title">
+                      MoonBoxes
+                    </div>
+                  </li>
+
+
+                  <li class="rb-item soon" ng-repeat="itembx">
+                    <div class="timestamp">
+                      Q3 2021<br />
+                    </div>
+                    <div class="item-title">
+                      Lottery Pools
+                    </div>
+                  </li>
+    
+                  <li class="rb-item soon" ng-repeat="itembx">
+                    <div class="timestamp">
+                      Q3 2021<br />
+                    </div>
+                    <div class="item-title">
+                      Blockchain Gamification, Highscore rankings and Price Pools
+                    </div>
+                  </li>
+    
+                  <li class="rb-item soon" ng-repeat="itembx">
+                    <div class="timestamp">Q4 2021<br /></div>
+                    <div class="item-title">
+                      Further development
+                    </div>
+                  </li>
+
+                  
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+
+    </div>
+
+
+
+    <div class="spacer"></div>
+    
+    <footer>
+        <p>Moonshot is a social experiment issued on the Binance
+          smart chain that is fully community-driven!<br/>
+          The content shared on this website is for information purpose only and, thus, should not be considered as financial advice.<br/>
+            Trading/investing is risky and you should never invest more than you can afford to lose. Cryptocurrencies are risky.<br/>
+            Always seek professional advice before making any investment.<br/> 
+            You alone assume the sole responsibility of evaluating the merits and risks associated with the use of any information or<br/>
+            other Content on this website before making any decisions based on such information or other content.<br/>
+            <br/>
+          </p>
+      </footer>
+
+    <div class="spacer"></div>
+   
+    <div class="nav">
+        <div class="flex-container-bottom">
+            <div class="flex-items"><span><a class="link" target="_blank" href="https://solidity.finance/audits/MOONSHOT/"><img class="icon" src="img/solidity-finance.png"/></a></span></div>
+            <div class="flex-items"><span><a class="link" target="_blank" href="https://github.com/moonshot-platform"><img class="icon" src="img/github.png"/></a></span></div>
+            <div class="flex-items"><span><a class="link" target="_blank" href="https://t.me/MoonShotChat"><img class="icon" src="img/telegram.svg"/></a></span></div>
+            <div class="flex-items"><span><a class="link" target="_blank" href="https://twitter.com/RS25Moonshot"><img class="icon" src="img/twitter.png"/></a></span></div>
+            <div class="flex-items"><span><a class="link" target="_blank" href="https://discord.gg/QrXVQRKzrh"><img class="icon" src="img/discord.svg"/></a></span></div>
+            <div class="flex-items"><span><a class="link" target="_blank" href="https://bscscan.com/address/0xd27d3f7f329d93d897612e413f207a4dbe8bf799#code"><img class="icon" src="img/bsc.ico"/></a></span></div>
+            <div class="flex-items"><span><a class="link" target="_blank" href="https://exchange.pancakeswap.finance/#/swap?inputCurrency=0xd27D3F7f329D93d897612E413F207A4dbe8bF799"><img class="icon" src="img/pancakeswap.ico"/></a></span></div>
+        </div>
+    </div> 
+
+  <script>
+    var isPlaying = false;
+    
+    window.onscroll = function () {
+      scrollFunction();
+    };
+    function scrollFunction() {
+      if (
+        document.body.scrollTop > 80 ||
+        document.documentElement.scrollTop > 80
+      ) {
+        document.getElementById("navbar").style.background = "#00000090";
+      } else {
+        document.getElementById("navbar").style.background = "#00000000";
+      }
+    }
+    
+    function play() {
+      let a = document.getElementById("music");
+      if(!isPlaying) {
+        a.currentTime = 0;
+        a.loop = true;
+        isPlaying = a.play();
+        document.getElementById("takethemoonshot").innerText = "TAKE THE MOONSHOT 𝅘𝅥𝅯𝆕";
+        window.open( "game.html", '_blank').focus();
+      }
+      else {
+        isPlaying = a.pause();
+        document.getElementById("takethemoonshot").innerText = "TAKE THE MOONSHOT";
+      }
+    }
+  </script>
+<!--  <script src="js/web3.js"></script> -->
+
+ 
+
+  <script type="text/javascript" src="https://unpkg.com/web3@1.3.4/dist/web3.min.js"></script>
+
+  <script type="text/javascript" src="https://unpkg.com/web3modal@1.9.3/dist/index.js"></script>
+
+ 
+  <script type="text/javascript" src="https://unpkg.com/evm-chains@0.2.0/dist/umd/index.min.js"></script>
+  <script type="text/javascript" src="https://unpkg.com/@walletconnect/web3-provider@1.2.1/dist/umd/index.min.js"></script>
+
+  <script type="text/javascript" src="https://unpkg.com/fortmatic@2.2.1/dist/fortmatic.js"></script>
+  <script src="js/donations.js"></script>
+  <script src="js/price-widget.js"></script>
+  <script src="js/countdown.js"></script>
+</body>
 </html>
