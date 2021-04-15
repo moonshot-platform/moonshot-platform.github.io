@@ -190,9 +190,10 @@
           let d = new Date();
           let year = d.getFullYear();
           let month = months[ d.getMonth() ];
-          let day = d.getDay();
+          let day = d.getDate();
           
           let today = month + " " + day + ", " + year;
+
           let hour = pad( (d.getHours() + 1 ) % 23, 2 );
 
           drawDate(context, today, 20, "#ffffff", 192, 345);
