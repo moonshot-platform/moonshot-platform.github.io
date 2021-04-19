@@ -173,21 +173,7 @@
         document.getElementById("navbar").style.background = "#00000000";
       }
     }
-    
-    function play() {
-      let a = document.getElementById("music");
-      if(!isPlaying) {
-        a.currentTime = 0;
-        a.loop = true;
-        isPlaying = a.play();
-        document.getElementById("takethemoonshot").innerText = "TAKE THE MOONSHOT 𝅘𝅥𝅯𝆕";
-        window.open( "game.html", '_blank').focus();
-      }
-      else {
-        isPlaying = a.pause();
-        document.getElementById("takethemoonshot").innerText = "TAKE THE MOONSHOT";
-      }
-    }
+
   </script>
 </body>
 </html>
