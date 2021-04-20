@@ -540,7 +540,7 @@ a {
 
 .roadmap .container {
     width: 43%;
-    height: 550px;
+    height: 800px;
     position: relative;
 }
 
@@ -577,7 +577,7 @@ a {
     justify-content: space-between;
     overflow-x: auto;
     -webkit-overflow-scrolling: touch;
-    height: 550px;
+    height: 800px;
     width: 40vw;
     padding: 10px 0 0;
     display: inline-block;
