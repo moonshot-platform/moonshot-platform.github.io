@@ -93,9 +93,14 @@ a {
     color: var(--nav-color);
 }
 
+.pageentry {
+    margin-top:10vmin;
+    text-align: center;
+}
+
 .moonpaper {
     text-align:center;
-    padding-top:9vh;
+    padding-top:6vh;
 }
 
 .moonticket {
@@ -269,7 +274,7 @@ a {
     overflow: hidden
 }
 
-.about h1 {
+.about h1, .about h2 {
     font-size: 3.5vw;
     text-transform: uppercase;
     font-style: italic;
@@ -296,7 +301,7 @@ a {
 }
 
 
-.about .about-text h2 {
+.about .about-text h4 {
     font-size: 1.25vw;
     font-weight: 800;
     line-height:3.5vh;
@@ -505,7 +510,7 @@ a {
     overflow: hidden;
 }
 
-.roadmap h1 {
+.roadmap h1, .roadmap h2 {
     font-size: 3.5vw;
     text-transform: uppercase;
     font-style: italic;
@@ -899,7 +904,7 @@ input[type="text"] {
         font-size: 2.5vmin;
         line-height: 4.0vmin;
     }
-    .about .about-text h2 {
+    .about .about-text h4 {
         font-size: 2.0vmin;
         line-height: 3.75vmin;
     }
@@ -986,7 +991,11 @@ input[type="text"] {
         font-size: 1.5vw;
     }
     
-    .about .about-text h2 {
+    .about h2 {
+        font-size: 1.5vw;
+    }
+
+    .about .about-text h4 {
         font-size: 1.0vw;
         line-height: 1.5vw
     }
@@ -1006,6 +1015,10 @@ input[type="text"] {
     }
     
     .roadmap h1 {
+        font-size: 1.5vw;
+    }
+
+    .roadmap h2 {
         font-size: 1.5vw;
     }
     
