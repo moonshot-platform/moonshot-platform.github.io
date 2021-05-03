@@ -64,7 +64,7 @@ html {
     text-rendering: geometricPrecision;
  }
 
- canvas{
+canvas{
     font-smooth: never;
     -webkit-font-smoothing : none;
 }
@@ -427,6 +427,7 @@ a {
 
 .about h3 {
     font-size: 1.85vw;
+    line-height: 2.25vw;
     margin-bottom: 2vh;
 }
 
@@ -1007,6 +1008,7 @@ input[type="text"] {
     
     .about h3 {
         font-size: 0.75vw;
+        line-height: 1.25vw;
     }
     
     .about .about-bottom .bottom-text div p {
