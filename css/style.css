@@ -74,8 +74,23 @@ body {
     height: auto;
     background-color: var(--gray10);
     background: linear-gradient(90deg, rgba(5,5,5,1) 0%, rgba(12,8,19,1) 30%, rgba(20,22,42,0.9500175070028011) 69%, rgba(9,9,10,1) 100%);
-    font-size:1.25vw;
+    font-size:2.25vmin;
     color:white;
+}
+
+.shop {
+    flex-direction: column;
+    display:flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-around;
+    align-items: center;
+    align-content: center;
+}
+
+.shopitem {
+    width:50%;
+    text-align: center;    
 }
 
 a:hover{
@@ -94,13 +109,13 @@ a {
 }
 
 .pageentry {
-    margin-top:10vmin;
+    margin-top:16vmin;
     text-align: center;
 }
 
 .moonpaper {
     text-align:center;
-    padding-top:6vh;
+    padding-top:6vmin;
 }
 
 .moonticket {
@@ -130,11 +145,25 @@ a {
     align-content: center;
     width:100%;
     height:8vmin;
-
     position:fixed;
     top:0;
     background:#000000;
 }
+
+.flex-container-top-bot {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-around;
+    align-items: center;
+    align-content: center;
+    width:100%;
+    height:8vmin;
+    position:fixed;
+    top:6vmin;
+    background:#000000;
+}
+ 
  
 .flex-container-bottom {
     display: flex;
@@ -196,6 +225,7 @@ a {
     align-self: auto;
     order: 0;
 }
+
 
 .moonshot {
     text-align:center;
@@ -269,7 +299,7 @@ a {
     -webkit-box-direction: normal;
     -ms-flex-direction: column;
     flex-direction: column;
-    padding-top: 150px;
+    padding-top: 15vmin;
     color: var(--fonts);
     overflow: hidden
 }
@@ -333,7 +363,7 @@ a {
 .about .content-img-op {
     width: 43%;
     height: 50%;
-    margin-top: 10vh;
+    margin-top: 35vmin;
     margin-left: 40%;
     position: absolute;
     opacity: 0.10;
@@ -344,7 +374,7 @@ a {
     background-repeat: no-repeat;
     background-size:contain;
     background-position: center;
-    height:35vh;
+    height:35vmin;
     width:35%;
     margin-top:5vh;
 }
@@ -384,7 +414,7 @@ a {
 }
 
 .launch {
-    font-size:1.15vw;
+    font-size:1.75vmin;
     font-weight: bold;
     color: var(--gray);
     text-align:center;
@@ -444,7 +474,7 @@ a {
 }
 
 .about .about-bottom {
-    padding-top: 5vh;
+    padding-top: 15vmin;
     width: 100%;
     display: -webkit-box;
     display: -ms-flexbox;
@@ -492,7 +522,7 @@ a {
 
 
 .roadmap {
-    margin-top: 30vh;
+    margin-top: 20vmin;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -506,7 +536,7 @@ a {
     -webkit-box-direction: normal;
     -ms-flex-direction: column;
     flex-direction: column;
-    padding-bottom: 20vh;
+    padding-bottom: 20vmin;
     color: var(--fonts);
     overflow: hidden;
 }
@@ -776,8 +806,9 @@ footer {
 
 footer p {
     color: var(--fonts);
-    font-size:0.9vw;
-    line-height:1.0vw;
+    font-size:1.5vmin;
+    line-height:2.75vmin;
+    text-align: center;
 }
 
 footer a {
@@ -880,7 +911,7 @@ input[type="text"] {
 
 @media(max-width: 375px) {
     footer p {
-        font-size:0.5vw;
+        font-size:2.2vmin;
     }
     .icon {
         width:24px;
@@ -889,7 +920,7 @@ input[type="text"] {
     }
     
     .moonpaper-text {
-        font-size: 1.15vmin;
+        font-size: 1.75vmin;
     }
 
     .dark {
@@ -976,7 +1007,8 @@ input[type="text"] {
     }
 
     footer p {
-        font-size:0.85vmin;
+        font-size:1.75vmin;
+        line-height:3.0vmin;
     }
 
 }
